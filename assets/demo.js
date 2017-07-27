@@ -12,7 +12,7 @@ for (var i = 0; i < canvas.width; i++) {
 drip.mainLoop();
 
 // Paint on mouse move
-canvas.addEventListener('mousemove', function(e) {
+document.addEventListener('mousemove', function(e) {
   var rect = canvas.getBoundingClientRect();
   var x = Math.round((e.clientX - rect.left) / (rect.width / canvas.width));
   var y = Math.round((e.clientY - rect.top) / (rect.height / canvas.height));
