@@ -19,13 +19,18 @@ html, body {
   top: 50%; 
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
   margin: 0;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
   cursor: default;
   font-size: 7em;
   color: white;
   text-shadow: 0 0 4px rgba(0,0,0,0.6);
+  text-align: center;
 }
 
 /* https://stackoverflow.com/questions/7615009/disable-interpolation-when-scaling-a-canvas */
@@ -34,6 +39,7 @@ html, body {
   image-rendering: -moz-crisp-edges;
   image-rendering: -webkit-optimize-contrast;
   image-rendering: -o-crisp-edges;
+  image-rendering: -o-pixelated;
   image-rendering: pixelated;
   -ms-interpolation-mode: nearest-neighbor;
 }
@@ -43,7 +49,8 @@ html, body {
   top: 50%; 
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  -ms-transform: translateX(-50%) translateY(-50%);
+      transform: translateX(-50%) translateY(-50%);
   min-width: 100%; 
   min-height: 100%; 
   width: auto; 

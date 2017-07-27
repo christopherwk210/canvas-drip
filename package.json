@@ -1,0 +1,24 @@
+{
+  "name": "canvas-drip",
+  "version": "1.0.0",
+  "description": "A canvas experiment that simulates paint dripping.",
+  "scripts": {
+    "build": "npm run lint && npm run uglify",
+    "lint": "jshint src/canvas-drip.js",
+    "uglify": "mkdir -p dist && uglifyjs src/canvas-drip.js -c -m -o dist/canvas-drip.min.js"    
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/christopherwk210/canvas-drip.git"
+  },
+  "author": "Chris Anselmo <christopherwk210@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/christopherwk210/canvas-drip/issues"
+  },
+  "homepage": "https://github.com/christopherwk210/canvas-drip#readme",
+  "dependencies": {
+    "jshint": "^2.9.5",
+    "uglify-js": "^3.0.26"
+  }
+}

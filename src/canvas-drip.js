@@ -16,8 +16,7 @@ function CanvasDrip(canvas) {
   var vendors = ['ms', 'moz', 'webkit', 'o'];
   for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
       window.requestAnimationFrame = window[vendors[x]+'RequestAnimationFrame'];
-      window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] 
-                                  || window[vendors[x]+'CancelRequestAnimationFrame'];
+      window.cancelAnimationFrame = window[vendors[x]+'CancelAnimationFrame'] || window[vendors[x]+'CancelRequestAnimationFrame'];
   }
 }
 
@@ -35,7 +34,7 @@ CanvasDrip.prototype.getPixel = function(x, y) {
     b: pixel.data[2],
     a: pixel.data[3]
   };
-}
+};
 
 /**
  * Draw a single pixel to the canvas
@@ -46,7 +45,7 @@ CanvasDrip.prototype.getPixel = function(x, y) {
 CanvasDrip.prototype.drawPixel = function(x, y, color) {
   if (color) { this.ctx.fillStyle = color; }
   this.ctx.fillRect(x, y, 1, 1);
-}
+};
 
 /**
  * Create the dripping effect
@@ -62,7 +61,7 @@ CanvasDrip.prototype.mainLoop = function() {
     }
   }
   requestAnimationFrame(this.mainLoop.bind(this));
-}
+};
 
 /**
  * Creates a valid rgb string from color data
@@ -71,4 +70,4 @@ CanvasDrip.prototype.mainLoop = function() {
  */
 CanvasDrip.prototype.colorDataToString = function(color) {
   return 'rgb(' + color.r + ',' + color.g + ',' + color.b + ')';
-}
+};
