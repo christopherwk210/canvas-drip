@@ -10,8 +10,20 @@ html, body {
   height: 100vh;
   overflow: hidden;
   position: fixed;
-  top:0;left:0;
+  top:0;
+  left:0;
   z-index: -1;
+}
+
+.canvas-cover:after {
+  content:'';
+  position: absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  z-index: -1;
+  background-color: rgba(0,0,0,0.2);
 }
 
 .canvas-cover h1 {
@@ -56,4 +68,5 @@ html, body {
   width: auto; 
   height: auto;
   overflow: hidden;
+  z-index: -2;
 }
