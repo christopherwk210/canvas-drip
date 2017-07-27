@@ -1,5 +1,6 @@
 // Initialize
 var canvas = document.getElementById('canvas');
+var ctx = canvas.getContext('2d');
 var drip = new CanvasDrip(canvas);
 
 // Draw a colorful line across the top
@@ -7,6 +8,12 @@ for (var i = 0; i < canvas.width; i++) {
   var color = randomColor();
   drip.drawPixel(i, 0, color);
 }
+
+// Disable smoothing where supported (can also be done via CSS with image-rendering)
+ctx.mozImageSmoothingEnabled = false;
+ctx.webkitImageSmoothingEnabled = false;
+ctx.msImageSmoothingEnabled = false;
+ctx.imageSmoothingEnabled = false;
 
 // Begin the drip!
 drip.mainLoop();

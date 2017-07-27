@@ -6,12 +6,6 @@ function CanvasDrip(canvas) {
   // Get canvas context
   this.ctx = canvas.getContext('2d');
 
-  // Disable smoothing where supported (can also be done via CSS with image-rendering)
-  this.ctx.mozImageSmoothingEnabled = false;
-  this.ctx.webkitImageSmoothingEnabled = false;
-  this.ctx.msImageSmoothingEnabled = false;
-  this.ctx.imageSmoothingEnabled = false;
-
   // requestAnimationFrame polyfill
   var vendors = ['ms', 'moz', 'webkit', 'o'];
   for(var x = 0; x < vendors.length && !window.requestAnimationFrame; ++x) {
